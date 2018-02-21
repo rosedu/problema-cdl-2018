@@ -6,7 +6,7 @@ Era o zi friguroasa de iarna. Zapada ajungea pana la genunchii copiilor care, de
 set X Y - seteaza valoarea Y in registrul X
 add X Y - creste valoarea din X cu Y
 mul X Y - seteaza valoarea registrului X ca fiind rezultatul multiplicarii lui X cu Y
-mod X Y  - valoarea din X devine valoarea precedenta modulo Y (X <- X modulo Y)
+mod X Y - valoarea din X devine valoarea precedenta modulo Y (X <- X modulo Y)
 jgz X Y - in cazul in care valoarea lui X este mai mare decat 0, se va sari in cadrul programului
   cu Y instructiuni(spre exemplu, daca Y este 2, se va sari peste urmatoarea instructiune; 
   daca Y este -1, se va sari la instructiunea precedenta)
@@ -36,11 +36,12 @@ rcv R14
 rcv R2
 ```
 Ambele procesoare ruleaza acelasi cod si incep prin a trimite valoarea 5, urmata de valoarea din registrul R0. Registrele pot fi privite ca niste variabile ce sunt setate initial pe 0, cu exceptia registrului R0, care este special. Valoarea din el este setata cu indicele procesorului pe care ruleaza (pentru primul procesor, va avea valoarea 0, in timp ce pentru al doilea, va avea valoarea 1). Astfel, procesoarele trimit valorile 0, respectiv 1. 
-Ambele procesoare executa RCV, salvand in registurl R13 valoarea 5. Primul procesor va salva in registrul R14 valoarea 1, iar cel de-al doilea va salva in R14 valoarea 0. Intrucat procesoarele incearca sa execute amandoua RCV, dar nu isi mai pot trimite date, ele raman blocate in aceasta stare fara posibilitatea de a mai iesi. Fenomenul poarta denumirea de deadlock si, in cazul specific al procesoarelor noastre, face ca programele sa isi incheie executia.
+Ambele procesoare executa RCV, salvand in registrul R13 valoarea 5. Primul procesor va salva in registrul R14 valoarea 1, iar cel de-al doilea va salva in R14 valoarea 0. Intrucat procesoarele incearca sa execute amandoua RCV, dar nu isi mai pot trimite date, ele raman blocate in aceasta stare fara posibilitatea de a mai iesi. Fenomenul poarta denumirea de deadlock si, in cazul specific al procesoarelor noastre, face ca programele sa isi incheie executia.
 
-Programele isi pot incheia executia in doua moduri:
-In momentul in care nu mai exista o instructiune urmatoare
-Prin deadlock
+Programele isi pot incheia executia in doua moduri:  
+a. in momentul in care nu mai exista o instructiune urmatoare  
+b. prin deadlock
+
 In cazul in care un procesor isi incheie executia programului, dar celalalt procesor mai are instructiuni de executat in continuare, procesorul al doilea va continua sa le execute pana cand ajunge sa fie blocat intr-un RCV din care nu mai poate sa primeasca date sau pana cand isi termina si el instructiunile.
 
 Procesoarele folosesc 32 de registri pe 32 de biti in care stocheaza valori cu semn, denumiti R0, R1, …, R31. Conform instructiunilor bunicului tau, registrii R1, R2, …, R31 sunt initializati intotdeauna cu 0, in timp ce registrul R0 este initializat cu indicele procesorului pe care ruleaza.
@@ -54,12 +55,14 @@ Fisierul code.in va contine pe prima linie un numar N ce reprezinta numarul de p
 In fisierul code.out se va afisa un sir de numere ce reprezinta valorile nenule din registrii procesoarelor. Pe fiecare rand se vor gasi valorile din fiecare procesor. Valorile nenule vor fi in ordine, afisandu-se mai intai registrii primului procesor, apoi registrii celui de-al doilea, in ordine crescatoare (R0, R1, …, R31). Se vor afisa doar valorile nenule.
 Exemplu:
 Daca procesorul 0 are R1 = 3 si R7 = 9, iar procesorul 1 are R0 = 1, R6 = 3 si R9 = 14, outputul va fi:
+```
 3 9
 1 3 14
+```
 
 ### Bonus
 Codul poate fi executat pe oricate procesoare. Prima linie din input va contine numarul de procesoare pe care trebuie sa simulati executia codului.
-Registrul r0 din fiecare procesor va fi initializat cu indicele procesorului (0 pentru primul procesor, 1 pentru al doilea etc.). Instructiunile de snd si rcv se vor realiza astfel:
+Registrul R0 din fiecare procesor va fi initializat cu indicele procesorului (0 pentru primul procesor, 1 pentru al doilea etc.). Instructiunile de snd si rcv se vor realiza astfel:
 fiecare procesor trimite la procesorul urmator, mai putin ultimul, care trimite catre procesorul 0 (ex. 0 -> 1, 1 -> 2, 2 -> 3, … , (N - 1) -> 0)
 **Nota:** rezultatele obtinute in urma implementarii bonusului nu trebuie sa difere de rezultatele obtinute pe cazul in care exista doar doua procesoare.
 
