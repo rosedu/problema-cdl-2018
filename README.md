@@ -42,7 +42,7 @@ Programele isi pot incheia executia in doua moduri:
 a. in momentul in care nu mai exista o instructiune urmatoare  
 b. prin deadlock
 
-In cazul in care un procesor isi incheie executia programului, dar celalalt procesor are, in continuare, instructiuni de executat, al doilea procesor va continua sa le execute pana cand ajunge sa fie blocat intr-un RCV din care nu mai poate sa primeasca date sau pana cand isi termina si el instructiunile.
+In cazul in care un procesor isi incheie executia programului, dar celalalt procesor mai are instructiuni de executat, al doilea procesor va continua sa le execute pana cand ajunge sa fie blocat intr-un RCV din care nu mai poate sa primeasca date sau pana cand isi termina si el instructiunile.
 
 Procesoarele folosesc 32 de registri pe 32 de biti in care stocheaza valori cu semn, denumiti R0, R1, …, R31. Conform instructiunilor bunicului tau, registrii R1, R2, …, R31 sunt initializati intotdeauna cu 0, in timp ce registrul R0 este initializat cu indicele procesorului pe care ruleaza.
 
