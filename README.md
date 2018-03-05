@@ -76,7 +76,8 @@ if (N != 2) {
 ## Trimiterea solutiei
 Solutia va fi trimisa sub forma unei arhive .zip. Aceasta trebuie sa contina:  
 * fisierele sursa (organizate in functie de implementare)
-* un fisier MAKEFILE, plasat in radacina arhivei, cu regulile: build, clean, run  
+* un fisier MAKEFILE, plasat in radacina arhivei, cu regulile: build, clean, run
+
 **Nota**: Fisierul code.in va fi citit din radacina arhivei. Executabilul si fisierul code.out vor fi generate tot in radacina arhivei.  In cazul testarii locale, rezultatul testelor se va gasi in directorul ```output```.
 
 ## Troubleshooting
