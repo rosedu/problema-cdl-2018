@@ -1,0 +1,9 @@
+2
+set R5 5
+snd R0
+rcv R2
+add R2 R0
+mul R2 -1
+add R5 R2
+jgz R5 -1
+mul R1 R2

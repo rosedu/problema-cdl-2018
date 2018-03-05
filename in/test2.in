@@ -1,0 +1,12 @@
+2
+set R2 7
+set R3 8
+snd R3
+snd R2
+mul R2 R3
+add R5 R2
+mul R2 -1
+snd R2
+rcv R2
+rcv R3
+rcv R7
