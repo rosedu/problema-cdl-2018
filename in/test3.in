@@ -1,0 +1,12 @@
+2
+set R3 2004
+add R0 1
+snd R0
+rcv R5
+mod R3 5
+add R3 -1
+jgz R3 -5
+mul R5 10
+snd R5
+rcv R4
+mul R4 R5
