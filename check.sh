@@ -1,7 +1,7 @@
 #!/bin/bash
 
-testsNumber=4
-bonusTestsNumber=0
+testsNumber=7
+bonusTestsNumber=3
 sum=0
 
 make clean > /dev/null
@@ -29,7 +29,7 @@ done
 echo "------------Bonus tests------------"
 for i in $(seq 1 $bonusTestsNumber); do
     cp ./in/test_bonus$i.in ./code.in
-    make run
+    make run > /dev/null
     cp code.out ./output/test_bonus$i.out
 	diff -Z code.out ref/test_bonus$i.ref > /dev/null 
 	if [ $? -eq 0 ]; then

@@ -1,0 +1,29 @@
+2
+mul R1 R1
+add R1 R0
+snd R0
+add R6 R2
+snd R6
+mod R9 3
+add R9 3
+set R0 R1
+rcv R1
+jgz R13 3
+jgz R1 5
+snd R1
+rcv R9
+add R13 R9
+set R9 89
+snd R4
+jgz R13 5
+set R0 4
+rcv R1
+snd R0
+add R1 1
+mul R13 3
+rcv R9
+set R9 13
+add R0 1
+add R13 R9
+add R1 R9
+set R13 20
