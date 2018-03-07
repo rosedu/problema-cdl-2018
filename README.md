@@ -1,3 +1,5 @@
+## Checker-ul local a fost publicat!
+
 # Distributed execution simulator
 
 Era o zi friguroasa de iarna. Zapada ajungea pana la genunchii copiilor care, desi inghetasera, continuau sa se bata cu bulgari. In acea lupta incrancenata, unul dintre bulgari a lovit turturii de pe casa ta, care s-au desprins si au cazut, facand un zgomot puternic. Pisica ta, Bit, ce statea pe pervaz si admira zapada, s-a speriat si, printr-o saritura ampla, a ajuns sa darame statueta de pe masa, mostenita de la bunicul tau. Printre cioburile statuetei, gasesti cateva foi ce par sa contina cod, intr-un limbaj necunoscut tie. Una dintre pagini iti da, totusi, explicatiile de care ai nevoie legat de instructiunile limbajului. 
