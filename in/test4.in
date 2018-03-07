@@ -1,42 +1,30 @@
 2
-set R1 31
-set R3 1
-mul R0 17
-jgz R0 R0
-mul R3 2
-add R1 -1
-jgz R1 -2
-add R3 -1
-set R1 127
-set R0 735
-mul R0 8505
-mod R0 R3
-mul R0 129749
-add R0 12345
-mod R0 R3
-set R10 R0
-mod R10 10000
-snd R10
-add R1 -1
-jgz R1 -9
-jgz R3 3
-rcv R10
-jgz R10 -1
-set R5 0
-set R1 126
-rcv R3
-rcv R10
-set R0 R3
-mul R0 -1
-add R0 R10
-jgz R0 4
-snd R3
-set R3 R10
-jgz 1 3
-snd R10
-set R5 1
-add R1 -1
-jgz R1 -11
-snd R3
-jgz R5 -16
-jgz R3 -19
+snd R31
+snd R0
+rcv R4
+jgz R4 -1
+add R5 R4
+set R5 R1
+snd R5
+rcv R1
+jgz R1 2
+mul R1 5
+rcv R31
+set R1 1
+add R31 17
+mod R1 R31
+jgz R1 -4
+mul R31 892
+jgz R31 7
+add R1 R4
+add R4 R5
+mod R4 R1
+snd R31
+set R31 23
+rcv R5
+mod R5 2
+snd R4
+rcv R4
+jgz R1 -1
+mul R1 5
+set R1 47

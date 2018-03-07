@@ -1,0 +1,29 @@
+2
+snd R5
+rcv R1
+jgz R1 2
+add R21 R9
+set R13 89
+snd R4
+jgz R13 5
+set R0 4
+rcv R1
+snd R0
+add R1 1
+mul R21 3
+set R5 5
+snd R0
+rcv R2
+add R2 R0
+mul R21 -1
+add R5 R2
+jgz R5 -4
+mul R1 R2
+set R0 R1
+rcv R1
+jgz R13 3
+jgz R1 5
+snd R1
+add R19 R9
+add R1 R9
+set R21 20

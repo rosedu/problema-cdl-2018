@@ -1,0 +1,22 @@
+5
+set R1 R0
+jgz R1 R1
+snd R1
+rcv R1
+snd R1
+jgz R1 -2
+add R4 3
+snd R4
+rcv R3
+snd R0
+rcv R1
+snd R1
+rcv R2
+snd R2
+rcv R5
+snd R5
+rcv R6
+mul R4 -1
+add R4 1
+add R3 -1
+jgz R3 -11
