@@ -1,5 +1,4 @@
-## Deadline inscriere: luni, 12 martie, ora 23:55
-## Checker-ul local a fost publicat!
+## Perioada de inscrieri a luat sfarsit!
 
 # Distributed execution simulator
 
